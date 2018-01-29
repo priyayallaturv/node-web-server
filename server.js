@@ -60,6 +60,13 @@ app.get('/about',(req, res) => {
     });
 });
 
+app.get('/contactUs', (req, res) => {
+  res.render('contactus.hbs', {
+    pageTitle: 'Contact Us',
+    contactDetails: 'You can contact us by email or call our number. '
+  })
+});
+
 app.get('/bad',(req, res) => {
   res.send({
     errorMessage: 'Bad request'
